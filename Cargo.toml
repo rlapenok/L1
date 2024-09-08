@@ -1,0 +1,4 @@
+
+[workspace]
+members = ["task_1"]
+resolver = "2"
