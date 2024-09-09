@@ -1,23 +1,18 @@
 trait Action {
-
     fn say(&self);
-    
 }
 
-struct Person<'a>{
-    name :&'a str
+struct Person<'a> {
+    name: &'a str,
 }
 
-impl<'a> Action for Person<'a>{
+impl<'a> Action for Person<'a> {
     fn say(&self) {
-        println!("Hello,{}",self.name);
+        println!("Hello,{}", self.name);
     }
 }
 
-
 fn main() {
-    let person=Person{
-        name:"Foo"
-    };
+    let person = Person { name: "Foo" };
     person.say();
 }
