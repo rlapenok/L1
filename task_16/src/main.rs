@@ -7,7 +7,6 @@ fn hand_made_binary_search<T:Ord>(data:&[T],target:&T)->Option<usize>{
     let mut end=data.len()-1;
     while start<=end {
         let mid=start+(end-start)/2;
-        //[1.2.3.4.5.6.7.8.9.10]
         if &data[mid]==target{
             return Some(mid)
         }else if &data[mid]<target {
